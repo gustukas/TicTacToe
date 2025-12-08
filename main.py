@@ -77,6 +77,14 @@ def win_detector():
             if continue_game():
                 return True
 
+def draw_detector():
+    if set(positionlist) == {"X","O"}:
+        print("Its a draw!")
+        if continue_game():
+            return True
+
+    
+
 
 def game():
     display(positionlist)
@@ -85,6 +93,8 @@ def game():
         clear_screen()
         display(positionlist)
         if win_detector():
+            return
+        if draw_detector():
             return
         o_adder(playertwo_choice())
         clear_screen()
