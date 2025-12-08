@@ -49,7 +49,7 @@ def o_adder(choiceint):
 def game_on():
     global gameon
     decision = input("Would you like to play another game? Y or N ")
-    decision.upper()
+    decision = decision.upper()
     if decision == "Y":
         gameon = True
     elif decision == "N":
